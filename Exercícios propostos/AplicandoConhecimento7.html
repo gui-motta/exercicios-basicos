@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var times = [["Futebol", "Inter Nacional", "12 atletas", "Vermelho"], ["Basquete", "Los Angeles Lakers", "5 atletas","Amarelo"], ["Vôlei", "Clube de Regatas Flamengo", "6 atletas", "Preto"]];
+      var simbolo = ["inter.jpg", "lakers.jpg", "flamengo.jpg"];
+      for(a = 0; a < 3; a++){
+        document.write(times[a] + "</br>");
+      }
+      function onClick(i) {
+          document.write(times[i] + "</br>");
+          document.write("<img src='"+ simbolo[i] + "'/></br>");
+      }
+    </script>
+    </br>
+    <h2>ESCOLHA A COR DESEJADA:</h2>
+    </br>
+    <form action="index.html" method="get">
+        <input type="radio" name="vermelho" value="vermelho" id="vermelho" onclick="onClick(0)"> <!-- IDEA: Passa o parâmetro para a função ao clicar no "Radio" do formulário! -->
+        <label for="vermelho">Vermelho</label>
+        <input type="radio" name="amarelo" value="Amarelo" id="Amarelo" onclick="onClick(1)">
+        <label for="amarelo">Amarelo</label>
+        <input type="radio" name="preto" value="preto" id="preto" onclick="onClick(2)">
+        <label for="preto">Preto</label>
+    </form>
+
+  </body>
+</html>
